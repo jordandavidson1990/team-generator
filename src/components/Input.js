@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-const Input = ({ i }) => {
-  const [input, setInput] = useState("");
+const Input = ({ i, lad }) => {
+  const [input, setInput] = useState(lad === "Newbee" ? "" : lad);
   return (
     <input
-      key={i}
+      key={lad}
       className="ch-mv--1 ch-form__control"
       value={input}
       onChange={e => setInput(e.target.value)}
