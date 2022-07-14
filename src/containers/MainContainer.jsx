@@ -27,9 +27,9 @@ const MainContainer = () => {
   }, []);
 
   return (
-    <div className="ch-container">
+    <div className="ch-container ch-bg--grey-3">
       <h1 className="ch-mt--3 ch-mb--5">Definitive 5s</h1>
-      <div className="ch-display--flex">
+      <div className="ch-display--flex ch-mb--3">
         <TeamMembersList handleSubmit={handleSubmit} />
         {members.length > 0 && pokemonNames.length > 0 && (
           <MixedTeams members={members} pokemonNames={pokemonNames} />

@@ -6,7 +6,7 @@ const TeamMembersList = ({ handleSubmit }) => {
     <form onSubmit={handleSubmit} className="ch-width--5">
       <div className="ch-card">
         <div className="ch-card__content">
-          <div className="ch-display--flex ch-form__group ch-flex-flow--column-wrap">
+          <div className="ch-display--flex ch-form__group ch-flex-flow--column-wrap ch-mb--3">
             {arrayOf10.map((x, i) => (
               <Input i={i} key={i} />
             ))}
