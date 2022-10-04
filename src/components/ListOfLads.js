@@ -9,9 +9,13 @@ const ListOfLads = ({ handleClick, clickedLads }) => {
   return (
     <div className="ch-mb--3">
       {lads
-        .filter(lad => !clickedLads.includes(lad))
-        .map(lad => (
-          <LadListItem lad={lad} handleClick={handleClick} key={lad} />
+        .filter((lad) => !clickedLads.includes(lad))
+        .map((lad, i) => (
+          <LadListItem
+            lad={lad}
+            handleClick={handleClick}
+            key={lad + "-" + i}
+          />
         ))}
     </div>
   );

@@ -12,7 +12,7 @@ const TeamMembersList = ({
         <div className="ch-card__content">
           <div className="ch-display--flex ch-form__group ch-flex-flow--column-wrap ch-mb--3">
             {clickedLads.map((lad, i) => (
-              <div className="ch-display--flex" key={lad}>
+              <div className="ch-display--flex" key={lad + "-" + i}>
                 <Input i={lad} lad={lad} />
                 <p
                   className="ch-fs--2 ch-color--ac-red ch-text--bold ch-mt--auto ch-mb--auto ch-ml--1"

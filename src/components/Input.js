@@ -4,10 +4,10 @@ const Input = ({ i, lad }) => {
   const [input, setInput] = useState(lad === "Newbee" ? "" : lad);
   return (
     <input
-      key={lad}
+      key={lad + "-" + i}
       className="ch-mv--1 ch-form__control"
       value={input}
-      onChange={e => setInput(e.target.value)}
+      onChange={(e) => setInput(e.target.value)}
       required
     />
   );

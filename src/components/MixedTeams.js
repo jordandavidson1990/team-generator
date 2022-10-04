@@ -14,8 +14,8 @@ const MixedTeams = ({ members, pokemonNames }) => {
         <h2 className="ch-color--ac-blue">
           {capitalizeFirstLetter(shuffledPokemon[0])}
         </h2>
-        {firstTeam.map((member) => (
-          <h5 className="ch-fs--4" key={member}>
+        {firstTeam.map((member, i) => (
+          <h5 className="ch-fs--4" key={member + "-" + i}>
             {capitalizeFirstLetter(member)}
           </h5>
         ))}
@@ -26,8 +26,8 @@ const MixedTeams = ({ members, pokemonNames }) => {
         <h2 className="ch-color--ac-violet">
           {capitalizeFirstLetter(shuffledPokemon[1])}
         </h2>
-        {lastTeam.map((member) => (
-          <h5 className="ch-fs--4" key={member}>
+        {lastTeam.map((member, i) => (
+          <h5 className="ch-fs--4" key={member + "-" + i}>
             {capitalizeFirstLetter(member)}
           </h5>
         ))}
