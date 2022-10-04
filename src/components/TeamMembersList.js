@@ -1,6 +1,11 @@
 import Input from "./Input";
 
-const TeamMembersList = ({ handleSubmit, clickedLads, removeLad }) => {
+const TeamMembersList = ({
+  handleSubmit,
+  clickedLads,
+  removeLad,
+  maxLength,
+}) => {
   return (
     <form onSubmit={handleSubmit} className="ch-width--5">
       <div className="ch-card">
@@ -18,7 +23,7 @@ const TeamMembersList = ({ handleSubmit, clickedLads, removeLad }) => {
               </div>
             ))}
           </div>
-          {clickedLads.length === 10 && (
+          {clickedLads.length === maxLength && (
             <button
               className="ch-btn ch-btn--success ch-width--12"
               type="submit"

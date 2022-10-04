@@ -3,8 +3,10 @@ import { capitalizeFirstLetter, shuffle } from "../helpers";
 const MixedTeams = ({ members, pokemonNames }) => {
   const shuffledPokemon = shuffle(pokemonNames);
   const mixedTeams = shuffle(members);
-  const firstTeam = mixedTeams.slice(0, 5);
-  const lastTeam = mixedTeams.slice(5, 10);
+  const totalMembersLength = members.length;
+  const halfWayLength = totalMembersLength / 2;
+  const firstTeam = mixedTeams.slice(0, halfWayLength);
+  const lastTeam = mixedTeams.slice(halfWayLength, totalMembersLength);
 
   return (
     <div className="ch-width--6 ch-mh--3">
@@ -12,7 +14,7 @@ const MixedTeams = ({ members, pokemonNames }) => {
         <h2 className="ch-color--ac-blue">
           {capitalizeFirstLetter(shuffledPokemon[0])}
         </h2>
-        {firstTeam.map(member => (
+        {firstTeam.map((member) => (
           <h5 className="ch-fs--4" key={member}>
             {capitalizeFirstLetter(member)}
           </h5>
@@ -24,7 +26,7 @@ const MixedTeams = ({ members, pokemonNames }) => {
         <h2 className="ch-color--ac-violet">
           {capitalizeFirstLetter(shuffledPokemon[1])}
         </h2>
-        {lastTeam.map(member => (
+        {lastTeam.map((member) => (
           <h5 className="ch-fs--4" key={member}>
             {capitalizeFirstLetter(member)}
           </h5>
