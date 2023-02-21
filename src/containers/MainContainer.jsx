@@ -18,7 +18,7 @@ const MainContainer = () => {
 
   return (
     <div className="ch-container ch-bg--grey-3">
-      <h1 className="ch-mt--3 ch-mb--5">
+      <h1 className="ch-mt--3 ch-mb--5 ch-ba--3 ch-bc--ac-green ch-rounded">
         Definitive {isNumbersFives ? "5" : "7"}s
       </h1>
       {clickedLads.length < maxLength && (
