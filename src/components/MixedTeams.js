@@ -11,9 +11,19 @@ const MixedTeams = ({ firstTeamBibs, members, pokemonNames }) => {
 
   return (
     <div className="ch-width--6 ch-mh--3">
-      <Team name={capitalizeFirstLetter(shuffledPokemon[0])} isBibs={firstTeamBibs} members={firstTeam} colour="blue" />
+      <Team
+        name={capitalizeFirstLetter(shuffledPokemon[0])}
+        isBibs={firstTeamBibs}
+        members={firstTeam}
+        colour="blue"
+      />
       <hr className="ch-mv--4 ch-bg--ac-green ch-bb--3 ch-bc--ac-green" />
-      <Team name={capitalizeFirstLetter(shuffledPokemon[1])} isBibs={!firstTeamBibs} members={lastTeam} colour="violet" />
+      <Team
+        name={capitalizeFirstLetter(shuffledPokemon[1])}
+        isBibs={!firstTeamBibs}
+        members={lastTeam}
+        colour="violet"
+      />
     </div>
   );
 };
