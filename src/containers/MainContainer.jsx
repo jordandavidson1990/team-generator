@@ -4,18 +4,18 @@ import TeamMembersList from "../components/TeamMembersList";
 import { useMainContainer } from "./useMainContainer";
 
 const MainContainer = () => {
-  const {
-    handleNumbersClick,
-    isNumbersFives,
-    maxLength,
-    clickedLads,
-    handleClickLad,
-    handleSubmit,
-    removeLad,
-    members,
-    pokemonNames,
-  } = useMainContainer();
-
+    const {
+        handleNumbersClick,
+        isNumbersFives,
+        maxLength,
+        clickedLads,
+        handleClickLad,
+        handleSubmit,
+        removeLad,
+        members,
+        pokemonNames,
+        firstTeamBibs,
+    } = useMainContainer();
   return (
     <div className="ch-container ch-bg--grey-3">
       <h1 className="ch-mt--3 ch-mb--5 ch-ba--3 ch-bc--ac-green ch-rounded">
@@ -46,9 +46,7 @@ const MainContainer = () => {
               <MixedTeams members={members} pokemonNames={pokemonNames} />
             )}
         </div>
-      )}
-    </div>
-  );
+    );
 };
 
 export default MainContainer;

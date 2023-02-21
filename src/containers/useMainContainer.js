@@ -40,6 +40,8 @@ export const useMainContainer = () => {
 
   const handleNumbersClick = () => setIsNumbersFives(!isNumbersFives);
 
+  const firstTeamBibs = Math.random() < 0.5;
+
   return {
     handleNumbersClick,
     isNumbersFives,
@@ -50,5 +52,6 @@ export const useMainContainer = () => {
     removeLad,
     members,
     pokemonNames,
+    firstTeamBibs,
   };
 };

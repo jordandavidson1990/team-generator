@@ -1,6 +1,7 @@
 import { capitalizeFirstLetter, shuffle } from "../helpers";
+import Team from "./Team";
 
-const MixedTeams = ({ members, pokemonNames }) => {
+const MixedTeams = ({ firstTeamBibs, members, pokemonNames }) => {
   const shuffledPokemon = shuffle(pokemonNames);
   const mixedTeams = shuffle(members);
   const totalMembersLength = members.length;
@@ -10,28 +11,9 @@ const MixedTeams = ({ members, pokemonNames }) => {
 
   return (
     <div className="ch-width--6 ch-mh--3">
-      <div className="ch-card ch-pa--3">
-        <h2 className="ch-color--ac-blue">
-          {capitalizeFirstLetter(shuffledPokemon[0])}
-        </h2>
-        {firstTeam.map((member, i) => (
-          <h5 className="ch-fs--4" key={member + "-" + i}>
-            {capitalizeFirstLetter(member)}
-          </h5>
-        ))}
-      </div>
+      <Team name={capitalizeFirstLetter(shuffledPokemon[0])} isBibs={firstTeamBibs} members={firstTeam} colour="blue" />
       <hr className="ch-mv--4 ch-bg--ac-green ch-bb--3 ch-bc--ac-green" />
-      <div className="ch-card ch-pa--3">
-        {" "}
-        <h2 className="ch-color--ac-violet">
-          {capitalizeFirstLetter(shuffledPokemon[1])}
-        </h2>
-        {lastTeam.map((member, i) => (
-          <h5 className="ch-fs--4" key={member + "-" + i}>
-            {capitalizeFirstLetter(member)}
-          </h5>
-        ))}
-      </div>
+      <Team name={capitalizeFirstLetter(shuffledPokemon[1])} isBibs={!firstTeamBibs} members={lastTeam} colour="violet" />
     </div>
   );
 };
