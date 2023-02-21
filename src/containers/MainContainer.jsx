@@ -14,7 +14,6 @@ const MainContainer = () => {
     removeLad,
     members,
     pokemonNames,
-    firstTeamBibs,
   } = useMainContainer();
 
   return (
